@@ -6,7 +6,7 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
 #DEFINE PINS
-limitpin = 12
+limitpin = 20
 
 #INITIALIZE PINS
 GPIO.setup(limitpin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
