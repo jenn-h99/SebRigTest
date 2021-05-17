@@ -17,12 +17,11 @@ GPIO.setup(rightlickport, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 # SCRIPT
 loopstat = 1
 while loopstat > 0:
-    if not GPIO.input(leftlickport):
-        print('<----LEFT')
-    elif not GPIO.input(rightlickport):
-        print('RIGHT---->')
-    elif not GPIO.input(leftlickport) and GPIO.input(rightlickport):
-        print('<-BOTH->')
-    else:
-        print('-')
+    leftl = 0
+    rightl = 0
+    if GPIO.input(leftlickport):
+        leftl = 1
+    if GPIO.input(rightlickport):
+        right = 1
+    print('left: ',leftl,'    right: ',rightl)
     time.sleep(0.01)

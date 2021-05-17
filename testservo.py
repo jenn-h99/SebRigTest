@@ -19,6 +19,8 @@ loopstat = 1
 
 while loopstat > 0:
     enterangle = input('Enter position (0-180 degrees)')
-    pwmcalc = (enterangle * 0.027) + 5
-    servopwm.ChangeDutyCycle(pwmcalc)
-
+    calcangle = float(enterangle)
+    pwmcalc = (calcangle * 0.02777) + 5
+    roundagl = round(pwmcalc, 2)
+    # servopwm.ChangeDutyCycle(roundagl)
+    print(roundagl)
