@@ -18,5 +18,6 @@ servopwm.start(0)
 loopstat = 1
 
 while loopstat > 0:
-    enterangle = input('Enter position (to 2 dec places. between 5 and 10)')
-    servopwm.ChangeDutyCycle(enterangle)
+    enterangle = input('Enter position (to 2 dec places. between 1 and 13)')
+    enteredangle = float(enterangle)
+    servopwm.ChangeDutyCycle(enteredangle)
