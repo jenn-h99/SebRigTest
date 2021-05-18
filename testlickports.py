@@ -11,8 +11,10 @@ rightlickport = 16
 
 
 # INITIALIZE PINS
-GPIO.setup(leftlickport, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(rightlickport, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+# GPIO.setup(leftlickport, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+# GPIO.setup(rightlickport, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(leftlickport, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(rightlickport, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 # SCRIPT
 loopstat = 1
@@ -22,6 +24,6 @@ while loopstat > 0:
     if GPIO.input(leftlickport):
         leftl = 1
     if GPIO.input(rightlickport):
-        right = 1
+        rightl = 1
     print('left: ',leftl,'    right: ',rightl)
     time.sleep(0.01)
