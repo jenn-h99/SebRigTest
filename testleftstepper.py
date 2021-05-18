@@ -18,8 +18,9 @@ GPIO.setup(directionpin, GPIO.OUT, initial=0)
 GPIO.setup(steppin, GPIO.OUT, initial=0)
 
 #SCRIPT
-numberofsteps = 400
-print('enable (0) : direction (0)')
+numberofsteps = 1200
+
+quest = input('enable (0) : direction (0)')
 GPIO.output(enablepin, 0)
 GPIO.output(directionpin, 0)
 for x in range(numberofsteps):
@@ -31,7 +32,7 @@ for x in range(numberofsteps):
     else:
         print('LIMIT SWITCH TRIGGER')
 
-print('enable (1) : direction (0)')
+quest = input('enable (1) : direction (0)')
 GPIO.output(enablepin, 1)
 GPIO.output(directionpin, 0)
 for x in range(numberofsteps):
@@ -43,7 +44,7 @@ for x in range(numberofsteps):
     else:
         print('LIMIT SWITCH TRIGGER')
 
-print('enable (0) : direction (1)')
+quest = input('enable (0) : direction (1)')
 GPIO.output(enablepin, 0)
 GPIO.output(directionpin, 1)
 for x in range(numberofsteps):
@@ -55,7 +56,7 @@ for x in range(numberofsteps):
     else:
         print('LIMIT SWITCH TRIGGER')
 
-print('enable (1) : direction (1)')
+quest = input('enable (1) : direction (1)')
 GPIO.output(enablepin, 1)
 GPIO.output(directionpin, 1)
 for x in range(numberofsteps):

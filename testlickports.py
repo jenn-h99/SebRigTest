@@ -6,8 +6,8 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
 # DEFINE PINS
-leftlickport = 10
-rightlickport = 9
+leftlickport = 12
+rightlickport = 16
 
 
 # INITIALIZE PINS
