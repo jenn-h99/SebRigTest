@@ -1,7 +1,7 @@
 import time
 import RPi.GPIO as GPIO
 
-# setup GPIO
+# SETUP GPIO
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
@@ -9,7 +9,7 @@ GPIO.setmode(GPIO.BCM)
 ttl_trigger_PIN = 15
 ttl_marker_PIN = 27
 
-# Pulse length
+# PULSE LENGTH
 pulse_length = 250
 
 # INITIALIZE PINS
